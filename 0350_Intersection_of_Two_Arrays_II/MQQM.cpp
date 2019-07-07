@@ -8,6 +8,9 @@
   示例 2:
   输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
   输出: [4,9]
+  
+  参考：
+  https://blog.csdn.net/my_clear_mind/article/details/81515029
 */
 class Solution {
 public:
