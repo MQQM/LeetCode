@@ -30,8 +30,12 @@ public:
         
         TreeNode* root = new TreeNode(t1->val + t2->val); // 两个都非空，新建了节点
         root->left = mergeTrees(t1->left, t2->left);
-        root->right = mergeTrees(t1->right, t2->right);
-        
+        root->right = mergeTrees(t1->right, t2->right);        
         return root;
+        // 不新建节点
+        // t1->val = t1->val + t2->val;
+        // t1->left =  mergeTrees(t1->left, t2->left);
+        // t1->right = mergeTrees(t1->right, t2->right);        
+        // return t1;
     }
 };
