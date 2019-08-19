@@ -24,9 +24,9 @@
 class Solution {
 public:
     string countAndSay(int n) {
-        vector<string> vec(30);
+        vector<string> vec(n);
         vec[0] = "1";
-        for(int i=0; i<=28; i++){
+        for(int i=0; i<=n-2; i++){
             string tmp = vec[i];
             int times = 0;
             char c = tmp[0];
