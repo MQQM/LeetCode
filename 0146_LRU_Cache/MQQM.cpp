@@ -10,7 +10,7 @@
   你是否可以在 O(1) 时间复杂度内完成这两种操作？
 
   示例:
-  LRUCache cache = new LRUCache( 2 /* 缓存容量 */ );
+  LRUCache cache = new LRUCache( 2 ); // 2为缓存容量 
   cache.put(1, 1);
   cache.put(2, 2);
   cache.get(1);       // 返回  1
