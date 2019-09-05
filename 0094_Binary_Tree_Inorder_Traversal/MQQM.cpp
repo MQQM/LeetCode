@@ -1,6 +1,19 @@
 /*
   题目：
   给定一个二叉树，返回它的中序 遍历。
+  
+  示例:
+  输入: [1,null,2,3]
+     1
+      \
+       2
+      /
+     3
+  输出: [1,3,2]
+
+  进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+  
+  做法：递归
 */
 
 /**
@@ -13,21 +26,18 @@
  * };
  */
 class Solution {
-private:
-    vector<int> vec;
 public:
-    void inorder(TreeNode* root){
-        if(root==NULL){
+    void inorder(TreeNode* root, vector<int>& res){
+        if(root == NULL){
             return;
-        }
-        
-        inorder(root->left);
-        vec.push_back( root->val );
-        inorder(root->right);
-    }
-    
+        }        
+        inorder(root->left, res);
+        res.push_back( root->val );
+        inorder(root->right, res);
+    }    
     vector<int> inorderTraversal(TreeNode* root) {
-        inorder(root);        
-        return vec; 
+        vector<int> res;
+        inorder(root, res);        
+        return res; 
     }
 };
