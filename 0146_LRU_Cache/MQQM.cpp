@@ -22,7 +22,7 @@
   cache.get(4);       // 返回  4
   
   不错的题解
-  https://leetcode-cn.com/problems/lru-cache/solution/lru-ce-lue-xiang-jie-he-shi-xian-by-labuladong/
+  https://leetcode-cn.com/problems/lru-cache/solution/lru-ce-lue-xiang-jie-he-shi-xian-by-labuladong
 */
 class LRUCache
 {
