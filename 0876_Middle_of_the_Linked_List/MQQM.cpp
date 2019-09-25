@@ -27,18 +27,27 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    ListNode* middleNode(ListNode* head) {        
-        ListNode* slow = head;
-        ListNode* fast = head;        
-        while(fast->next != NULL && fast->next->next != NULL){
-            fast=fast->next->next;
+    ListNode *middleNode(ListNode *head)
+    {
+        if (head == NULL)
+        { // 空链表
+            return NULL;
+        }
+
+        ListNode *slow = head;
+        ListNode *fast = head;
+        while (fast->next != NULL && fast->next->next != NULL)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        if (fast->next != NULL)
+        {
             slow = slow->next;
         }
-        if(fast->next == NULL){
-            return slow;
-        }        
-        return slow->next;        
+        return slow;
     }
 };
